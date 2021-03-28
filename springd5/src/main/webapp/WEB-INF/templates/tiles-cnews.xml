@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+  <definition name="template.cnews" template="/WEB-INF/views/jsp/templates/cnews.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/jsp/components/cnews/header.jsp" />
+    <put-attribute name="sidebar" value="/WEB-INF/views/jsp/components/cnews/sidebar.jsp" />
+    <put-attribute name="body" value="" />
+    <put-attribute name="footer" value="/WEB-INF/views/jsp/components/cnews/footer.jsp" />
+  </definition>
+  
+  <definition name="cnews.index" extends="template.cnews">
+    <put-attribute name="body" value="/WEB-INF/views/jsp/views/cnews/index.jsp" />
+  </definition>
+  
+  <definition name="cnews.add" extends="template.cnews">
+    <put-attribute name="body" value="/WEB-INF/views/jsp/views/cnews/add.jsp" />
+  </definition>
+  
+  <definition name="cnews.cat" extends="template.cnews">
+    <put-attribute name="body" value="/WEB-INF/views/jsp/views/cnews/cat.jsp" />
+  </definition>
+  
+  <definition name="cnews.detail" extends="template.cnews">
+    <put-attribute name="body" value="/WEB-INF/views/jsp/views/cnews/detail.jsp" />
+  </definition>
+</tiles-definitions>
